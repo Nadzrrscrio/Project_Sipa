@@ -1,5 +1,4 @@
 <?php
-// app/Models/TrackingLog.php
 
 namespace App\Models;
 
@@ -22,9 +21,6 @@ class TrackingLog extends Model
         'total_confidence_score'
     ];
 
-    /**
-     * Relasi balik: Setiap Log merujuk pada satu Alumni.
-     */
     public function alumni()
     {
         return $this->belongsTo(Alumni::class);

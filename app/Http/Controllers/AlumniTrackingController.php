@@ -16,10 +16,6 @@ class AlumniTrackingController extends Controller
 
         $apiKey = 'b46b163cfed526755edd39b39ae5bb5af314a3c196bf6dae447f17dd4ab38d76';
 
-        /**
-         * PERBAIKAN QUERY:
-         * Melepas filter Universitas agar profil dengan nama yang cocok tetap tertangkap.
-         */
         $query = 'site:linkedin.com/in "' . $alumni->nama_lengkap . '"';
 
         $response = Http::get("https://serpapi.com/search", [
@@ -49,7 +45,7 @@ class AlumniTrackingController extends Controller
             $currentAfiliasi = 0;
             $currentTimeline = 0;
 
-            // A. SKOR NAMA (+40 atau +20)
+            // A. SKOR NAMA
             $nameParts = explode(' ', strtolower($alumni->nama_lengkap));
             $matchCount = 0;
             foreach ($nameParts as $part) {
@@ -60,13 +56,13 @@ class AlumniTrackingController extends Controller
             if ($matchCount >= 2) $currentNama = 40;
             elseif ($matchCount == 1) $currentNama = 20;
 
-            // B. SKOR AFILIASI (+40) - Tetap dicek untuk dosen (Galih/Yufis)
+            // B. SKOR AFILIASI
             if ($currentNama > 0) {
                 if (str_contains($combinedText, 'muhammadiyah') || str_contains($combinedText, 'umm')) {
                     $currentAfiliasi = 40;
                 }
 
-                // C. SKOR TIMELINE (+20)
+                // C. SKOR TIMELINE 
                 if (preg_match('/20[0-2][0-9]/', $combinedText, $yearMatch)) {
                     if ($yearMatch[0] >= ($alumni->tahun_lulus - 2) && $yearMatch[0] <= ($alumni->tahun_lulus + 4)) {
                         $currentTimeline = 20;
