@@ -9,7 +9,7 @@ Proyek ini merupakan pemenuhan tugas **Daily Project 3** pada mata kuliah **Reka
 ## Demo & Tautan
 
 * **Link Website SIPA:** [https://nadzarsecario.my.id](https://nadzarsecario.my.id)
-* **Repository:** [https://github.com/nadzarsecario/project_sipa](https://github.com/nadzarsecario/project_sipa)
+* **Repository:** [https://github.com/Nadzarsecario/Project_Sipa](https://github.com/Nadzarsecario/Project_Sipa)
 
 ---
 
@@ -18,7 +18,6 @@ Proyek ini merupakan pemenuhan tugas **Daily Project 3** pada mata kuliah **Reka
 Sistem menggunakan pembobotan atribut untuk menentukan tingkat kepercayaan (*Confidence Score*) terhadap data yang ditemukan di mesin pencari.
 
 **Rumus Scoring:**
-> $$Total Score = Atribut Nama (40\%) + Atribut Afiliasi (40\%) + Atribut Timeline (20\%)$$
 
 | Komponen | Skor Maks | Kriteria |
 | :--- | :---: | :--- |
@@ -35,9 +34,11 @@ Berdasarkan rancangan pada **Daily Project 2**, berikut adalah hasil pengujian f
 | No | Skenario Pengujian | Input Data (Simulasi) | Expected Result (Score) | Status Akhir | Keterangan |
 | :--: | :--- | :--- | :---: | :---: | :--- |
 | 1 | **Data Identitas Sempurna** | Nama Lengkap, UMM, Tahun Lulus Sesuai | 100 | ✅ Terverifikasi | LULUS |
-| 2 | **Ambiguitas Afiliasi** | Nama & Tahun Cocok, Univ tidak spesifik | 60 | ⚠️ Verifikasi Manual | LULUS |
-| 3 | **Data Tidak Relevan** | Nama & Tahun tidak ditemukan di web | 0 - 20 | ❌ Tidak Cocok | LULUS |
-| 4 | **Reset Database** | Menghapus seluruh logs temuan | Logs Kosong | ✅ Cleaned | LULUS |
+| 2 | **Ambiguitas Tahun** | Nama & Universitas Cocok, Tahun tidak spesifik | 80 | ✅ Verifikasi Manual | LULUS |
+| 3 | **Ambiguitas Afiliasi** | Nama & Tahun Cocok, Univ tidak spesifik | 60 | ⚠️ Verifikasi Manual | LULUS |
+| 4 | **Data Nama Sempurna** | Nama Cocok, Univ dan tahun tidak spesifik | 40 | ⚠️ Verifikasi Manual | LULUS |
+| 5 | **Data Tidak Relevan** | Nama & Tahun tidak ditemukan di web | 0 | ❌ Tidak Cocok | LULUS |
+| 6 | **Reset Database** | Menghapus seluruh logs temuan | Logs Kosong | ✅ Cleaned | LULUS |
 
 ---
 
