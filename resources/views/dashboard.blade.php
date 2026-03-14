@@ -16,7 +16,7 @@
     <header class="hero-gradient text-white py-16 mb-10 shadow-lg">
         <div class="container mx-auto px-6 lg:px-20">
             <nav class="mb-8">
-                <span class="text-2xl font-bold tracking-tight">SIPA.</span>
+                <span class="text-2xl font-bold tracking-tight">SIPA</span>
             </nav>
             <div class="max-w-3xl">
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
@@ -184,6 +184,6 @@
             @endif
         </div>
     </main>
-
 </body>
 </html>
+
