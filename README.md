@@ -9,9 +9,8 @@ Proyek ini merupakan pemenuhan tugas **Daily Project 3** pada mata kuliah **Reka
 ## Demo & Tautan
 
 * **Link Website SIPA:** [https://nadzarsecario.my.id](https://nadzarsecario.my.id)
-* **Repository:** [https://github.com/Nadzarsecario/Project_Sipa](https://github.com/Nadzarsecario/Project_Sipa)
-
----
+* **Repository:** [https://github.com/Nadzrrscrio/Project_Sipa.git](https://github.com/Nadzrrscrio/Project_Sipa.git)
+# NOTE: Apabila saat melacak terdeteksi "Dangerous site", dimohon untuk menekan tombol details dan menekan "Only visit this unsafe site"
 
 ## Logika Scoring (Disambiguasi)
 
