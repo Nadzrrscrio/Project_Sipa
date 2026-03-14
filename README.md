@@ -57,3 +57,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 📊 Quality Assurance Testing
+
+Berikut adalah hasil pengujian aspek kualitas aplikasi SIPA berdasarkan desain Requirements Engineering:
+
+| ID | Quality Aspect | Test Scenario | Result | Status |
+|:---|:---|:---|:---|:---:|
+| QA-01 | Functional | Track LinkedIn & Scholar | Data retrieved & scored | Success |
+| QA-02 | Performance | Response Time | < 10 Seconds | Success |
+| QA-03 | Usability | Intuitive Dashboard | Clear indicators & navigation | Success |
+| QA-04 | Reliability | Empty Search Handling | No system crash (Error 500) | Success |
+| QA-05 | Security | Direct File Access | Forbidden access to .env/logs | Success |
